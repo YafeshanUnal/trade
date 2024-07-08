@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "c144d392-ce63-4a3e-b697-c7d01c145f27",
+		"name": "Eva Trade Case",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "19226392"
+	},
+	"item": [
+		{
+			"name": "Buy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": {{Id}},\r\n    \"walletId\": {{walletId}},\r\n    \"rate\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{host}}/api/buy"
+			},
+			"response": []
+		},
+		{
+			"name": "Sell",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": {{Id2}},\r\n    \"walletId\": {{walletId2}},\r\n    \"rate\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{host}}/api/sell"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:7000",
+			"type": "string"
+		},
+		{
+			"key": "Id",
+			"value": "\"AGH\"",
+			"type": "string"
+		},
+		{
+			"key": "walletId",
+			"value": "\"f6c0b97c-05b6-4278-a672-b15054d8e330\"",
+			"type": "string"
+		},
+		{
+			"key": "walletId2",
+			"value": "\"ef211091-cd0c-482b-b5d2-a7aa170729f5\"",
+			"type": "string"
+		},
+		{
+			"key": "Id2",
+			"value": "\"KEH\"",
+			"type": "string"
+		}
+	]
+}
